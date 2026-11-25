@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <title>Charles Babbage | Full Stack Web Developer</title>
+    <!-- Tailwind CSS v3 CDN with forms plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Font Awesome CDN for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <!-- Tailwind Config Customization -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'portfolio-slate': '#606e79',
+              'portfolio-dark': '#212529',
+              'portfolio-footer': '#242a30',
+              'mla-teal': '#004d53',
+              'mla-coral': '#e75353',
+            },
+            fontFamily: {
+              serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+              sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <!-- BEGIN: Custom Styles -->
+    <style data-purpose="custom-overrides">
+      /* Base typography setup */
+      h1,
+      h2,
+      h3,
+      .font-heading {
+        font-family: 'Georgia', 'Cambria', serif;
+      }
+    </style>
+    <!-- END: Custom Styles -->
+  </head>
+  <body class="bg-white text-gray-800 antialiased font-sans">
+    <!-- BEGIN: Navigation -->
+    <nav class="bg-portfolio-dark text-white sticky top-0 z-50 shadow-md">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-14 md:h-16">
+          <!-- Mobile Brand -->
+          <div class="flex-shrink-0 md:hidden">
+            <a class="text-xl font-heading tracking-wide text-gray-200 hover:text-white" href="#">Charles</a>
+          </div>
+          <!-- Desktop Navigation Links (Centered Layout) -->
+          <div class="hidden md:flex items-center justify-center w-full space-x-10 text-sm tracking-wide text-gray-300">
+            <a class="hover:text-white transition-colors duration-150" href="#home">Home</a>
+            <a class="hover:text-white transition-colors duration-150" href="#projects">Projects</a>
+            <a class="text-xl font-heading text-white font-normal px-2" href="#home">Charles</a>
+            <a class="hover:text-white transition-colors duration-150" href="#tools">Tools</a>
+            <a class="hover:text-white transition-colors duration-150" href="#contact">Contact</a>
+          </div>
+          <!-- Mobile Menu Toggle Button -->
+          <div class="flex md:hidden">
+            <button aria-label="Toggle navigation" class="p-2 rounded-md border border-gray-600 text-gray-400 hover:text-white focus:outline-none" id="mobile-menu-btn" type="button">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Dropdown Menu -->
+      <div class="hidden md:hidden bg-portfolio-dark border-t border-gray-700 px-4 pt-2 pb-4 space-y-2" id="mobile-menu">
+        <a class="block py-2 text-base text-gray-300 hover:text-white border-b border-gray-700" href="#home">Home</a>
+        <a class="block py-2 text-base text-gray-300 hover:text-white border-b border-gray-700" href="#projects">Projects</a>
+        <a class="block py-2 text-base text-gray-300 hover:text-white border-b border-gray-700" href="#tools">Tools</a>
+        <a class="block py-2 text-base text-gray-300 hover:text-white" href="#contact">Contact</a>
+      </div>
+    </nav>
+    <!-- END: Navigation -->
+    <!-- BEGIN: Hero Section -->
+    <header class="bg-portfolio-slate text-white py-12 md:py-20 px-4" id="home">
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+        <!-- Profile Image Container -->
+        <div class="flex-shrink-0">
+          <div class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-gray-300/40 shadow-xl bg-gray-200">
+            <img alt="Charles Babbage" class="w-full h-full object-cover grayscale contrast-125 brightness-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3NH3Nvgye5_fmgJ1UC5iCEPgwamwS369B13_gVQ908US1WEkLUuIamflBtJNckx8IPLh3qynNhUmu0N_ZbnRhsS-mxfJikn70MoYiTkYe4zl7cXp4QW2QGfT5Dw5byzl7szfuWQLkuXIGNv1qaOytce-iZJnNUgt4J7XlOYdEdQxFSE_R5qthNraDYDJBplbvLljaDvSnV2JCmjL_2XNZWEmebi1IOTVIq066Hb4" />
+          </div>
+        </div>
+        <!-- Bio / Profile Details -->
+        <div class="text-center md:text-left max-w-xl">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading mb-2 tracking-tight">Charles Babbage</h1>
+          <p class="text-lg sm:text-xl font-light text-gray-200 mb-4 tracking-normal">Full Stack Web Developer</p>
+          <p class="text-xs sm:text-sm leading-relaxed text-gray-200 font-light text-justify md:text-left"> Charles Babbage KH FRS (/ˈbæbɪdʒ/; 26 December 1791 – 18 October 1871) was an English polymath. A mathematician, philosopher, inventor and mechanical engineer, Babbage originated the concept of a digital programmable computer. Babbage is considered by some to be "father of the computer". </p>
+        </div>
+      </div>
+    </header>
+    <!-- END: Hero Section -->
+    <!-- BEGIN: Projects Section -->
+    <section class="py-16 md:py-20 bg-white" id="projects">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <!-- Section Heading -->
+        <h2 class="text-3xl sm:text-4xl text-center font-heading text-gray-800 mb-12 sm:mb-16">My Projects</h2>
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Project 1: E Commerce -->
+          <article class="flex flex-col border border-gray-200 rounded-md overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow">
+            <!-- Illustration Preview -->
+            <div class="h-56 sm:h-64 bg-slate-50 flex items-center justify-center p-4 border-b border-gray-100">
+              <svg class="w-full h-full max-h-48" fill="none" viewbox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                <rect fill="#4B3A8B" height="130" rx="8" width="220" x="30" y="30"></rect>
+                <rect fill="#6953C7" height="110" rx="4" width="200" x="40" y="40"></rect>
+                <rect fill="#9384E3" height="35" rx="4" width="40" x="55" y="55"></rect>
+                <rect fill="#9384E3" height="35" rx="4" width="40" x="105" y="55"></rect>
+                <rect fill="#9384E3" height="35" rx="4" width="40" x="155" y="55"></rect>
+                <rect fill="#9384E3" height="35" rx="4" width="60" x="55" y="100"></rect>
+                <circle cx="210" cy="110" fill="#FBBF24" opacity="0.9" r="28"></circle>
+                <path d="M190 145 C190 115 220 100 230 140 Z" fill="#F472B6"></path>
+                <!-- Shopping Cart -->
+                <path d="M70 170 L85 170 L100 135 L140 135 L150 160 L80 160" stroke="#94A3B8" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                <circle cx="102" cy="172" fill="#64748B" r="6"></circle>
+                <circle cx="140" cy="172" fill="#64748B" r="6"></circle>
+                <rect fill="#F87171" height="20" rx="2" width="30" x="105" y="138"></rect>
+              </svg>
+            </div>
+            <!-- Body -->
+            <div class="p-6 flex-1 flex flex-col text-center">
+              <h3 class="text-xl font-heading text-gray-900 mb-3">E Commerce</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed text-justify mb-6 flex-1"> E-commerce, or electronic commerce, refers to the buying and selling of goods and services online through the internet. It involves transactions between businesses, individuals, or even government agencies, and is facilitated through various digital platforms such as websites, mobile apps, social media, or marketplaces. </p>
+              <div class="border-t border-gray-100 pt-3 text-left">
+                <span class="text-xs text-gray-400">Last updated 3 mins ago</span>
+              </div>
+            </div>
+          </article>
+          <!-- Project 2: Blog -->
+          <article class="flex flex-col border border-gray-200 rounded-md overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow">
+            <!-- Illustration Preview with MLA banner -->
+            <div class="h-56 sm:h-64 bg-mla-coral relative flex flex-col justify-end p-4 border-b border-gray-100 overflow-hidden">
+              <!-- Top MLA Banner -->
+              <div class="absolute top-0 left-0 bg-mla-teal text-white text-xs font-bold tracking-wider px-6 py-2 rounded-br shadow"> MLA </div>
+              <!-- Browser Mockup -->
+              <div class="bg-white rounded-t-lg shadow-lg border border-gray-300 w-full p-3 pt-2">
+                <div class="flex items-center justify-between border-b pb-1 mb-2">
+                  <span class="text-xs font-bold text-gray-700 tracking-wider">BLOG</span>
+                  <span class="text-gray-400 text-xs font-bold">✕</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                  <div class="space-y-1.5 pt-1">
+                    <div class="h-2 bg-gray-400 rounded w-full"></div>
+                    <div class="h-1.5 bg-gray-300 rounded w-5/6"></div>
+                    <div class="h-1.5 bg-gray-300 rounded w-4/6"></div>
+                    <div class="h-1.5 bg-gray-300 rounded w-full"></div>
+                    <div class="h-1.5 bg-gray-300 rounded w-3/4"></div>
+                  </div>
+                  <div class="grid grid-cols-2 gap-1.5">
+                    <div class="h-7 bg-red-200 rounded"></div>
+                    <div class="h-7 bg-red-300 rounded"></div>
+                    <div class="h-7 bg-red-300 rounded"></div>
+                    <div class="h-7 bg-red-200 rounded"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Body -->
+            <div class="p-6 flex-1 flex flex-col text-center">
+              <h3 class="text-xl font-heading text-gray-900 mb-3">Blog</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed text-justify mb-6 flex-1"> A blog (a shortened version of “weblog”) is an online journal or informational website displaying information in reverse chronological order, with the latest posts appearing first, at the top. </p>
+              <div class="border-t border-gray-100 pt-3 text-left">
+                <span class="text-xs text-gray-400">Last updated 3 mins ago</span>
+              </div>
+            </div>
+          </article>
+          <!-- Project 3: Online Booking System -->
+          <article class="flex flex-col border border-gray-200 rounded-md overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow">
+            <!-- Illustration Preview -->
+            <div class="h-56 sm:h-64 bg-sky-50 flex items-center justify-center overflow-hidden border-b border-gray-100">
+              <img alt="Online Booking System Interface" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2a1MXDwCcWs0g1oq3eIE3Blp5kTzEXtnnJDWTnIkxLYSR3oQvsg9MAjx17ZuUcf9Leb8bHSgaK4GCmwHCXedXmMLVBPriSRVlJFDYzrMd9UUgXIrgxHytjmGHUC9G5Dlbqkxg7Z5Svr-e3YGhdumoN_RNhBYU3564i3sRpQU16UojyNQQnYk-0Cr9KfgvC3sZrktb0BW9OF9lmTKIMLOLXhYjT8UUaiZWLEL09cQ" />
+            </div>
+            <!-- Body -->
+            <div class="p-6 flex-1 flex flex-col text-center">
+              <h3 class="text-xl font-heading text-gray-900 mb-3">Online Booking System</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed text-justify mb-6 flex-1"> What is an online booking system? Put simply, an online booking system is a software solution used for reservation management. </p>
+              <div class="border-t border-gray-100 pt-3 text-left">
+                <span class="text-xs text-gray-400">Last updated 3 mins ago</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- END: Projects Section -->
+    <!-- BEGIN: Tools Section -->
+    <section class="py-16 md:py-20 bg-portfolio-slate text-white" id="tools">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <!-- Section Heading -->
+        <h2 class="text-3xl sm:text-4xl font-heading mb-12 sm:mb-16">Tools</h2>
+        <!-- Categories Layout: stacked on mobile, 3 columns on tablet/desktop -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+          <!-- Category 1: Front End -->
+          <div class="flex flex-col items-center">
+            <h3 class="text-xl font-heading mb-8 text-gray-200">Front End</h3>
+            <div class="grid grid-cols-2 gap-8 items-center justify-items-center w-48">
+              <!-- HTML5 -->
+              <div class="w-14 h-14 flex items-center justify-center text-4xl text-orange-600 hover:scale-110 transition-transform">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <!-- CSS3 -->
+              <div class="w-14 h-14 flex items-center justify-center text-4xl text-blue-500 hover:scale-110 transition-transform">
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <!-- Bootstrap -->
+              <div class="w-14 h-14 flex items-center justify-center text-4xl text-purple-400 hover:scale-110 transition-transform">
+                <i class="fa-brands fa-bootstrap"></i>
+              </div>
+              <!-- JS -->
+              <div class="w-14 h-14 flex items-center justify-center text-4xl text-yellow-400 hover:scale-110 transition-transform">
+                <i class="fa-brands fa-square-js"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Category 2: MERN -->
+          <div class="flex flex-col items-center">
+            <h3 class="text-xl font-heading mb-8 text-gray-200">MERN</h3>
+            <div class="grid grid-cols-2 gap-8 items-center justify-items-center w-48">
+              <!-- MongoDB (Leaf Badge) -->
+              <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-2xl text-emerald-600 font-bold shadow hover:scale-110 transition-transform">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <!-- Express.js (ex Badge) -->
+              <div class="w-14 h-14 rounded-full bg-stone-800 border border-stone-600 flex items-center justify-center text-white font-bold text-lg lowercase tracking-tight shadow hover:scale-110 transition-transform"> ex </div>
+              <!-- React -->
+              <div class="w-14 h-14 flex items-center justify-center text-4xl text-cyan-400 hover:scale-110 transition-transform">
+                <i class="fa-brands fa-react"></i>
+              </div>
+              <!-- Node.js -->
+              <div class="w-14 h-14 flex items-center justify-center text-4xl text-green-500 hover:scale-110 transition-transform">
+                <i class="fa-brands fa-node-js"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Category 3: Other Tools -->
+          <div class="flex flex-col items-center">
+            <h3 class="text-xl font-heading mb-8 text-gray-200">Other Tools</h3>
+            <div class="grid grid-cols-2 gap-8 items-center justify-items-center w-48">
+              <!-- Heroku badge placeholder style -->
+              <div class="w-12 h-12 bg-indigo-600 rounded flex items-center justify-center text-white font-bold text-2xl hover:scale-110 transition-transform shadow">
+                <i class="fa-solid fa-h"></i>
+              </div>
+              <!-- Git / GitLab -->
+              <div class="w-12 h-12 flex items-center justify-center text-4xl text-orange-500 hover:scale-110 transition-transform">
+                <i class="fa-brands fa-git-alt"></i>
+              </div>
+              <!-- Postman (styled orange round badge) -->
+              <div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform shadow">
+                <i class="fa-solid fa-paper-plane"></i>
+              </div>
+              <!-- Sublime Text / Code editor icon -->
+              <div class="w-12 h-12 rounded bg-amber-500 flex items-center justify-center text-white text-2xl font-black hover:scale-110 transition-transform shadow">
+                <i class="fa-solid fa-code"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Tools Section -->
+    <!-- BEGIN: Contact Section -->
+    <section class="py-16 md:py-20 bg-white" id="contact">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <!-- Section Title -->
+        <h2 class="text-3xl sm:text-4xl text-center font-heading text-gray-800 mb-8">Contact</h2>
+        <!-- Social Links Row -->
+        <div class="flex items-center justify-center space-x-8 mb-16 text-3xl text-gray-800">
+          <a aria-label="Facebook" class="hover:text-blue-600 transition-colors" href="#">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a aria-label="LinkedIn" class="hover:text-blue-700 transition-colors" href="#">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a aria-label="GitLab" class="hover:text-orange-600 transition-colors" href="#">
+            <i class="fa-brands fa-gitlab"></i>
+          </a>
+          <a aria-label="GitHub" class="hover:text-black transition-colors" href="#">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+        <!-- Two-Column Stack / Responsive Grid: Map & Message Form -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-start">
+          <!-- Left: Visit Us (Map Card) -->
+          <div>
+            <h3 class="text-xl font-heading text-center md:text-left text-gray-900 mb-6">Visit Us</h3>
+            <div class="border border-gray-300 rounded overflow-hidden shadow-sm bg-white relative">
+              <!-- Map Info Window / Overlay Banner -->
+              <div class="p-3 bg-white border-b border-gray-200">
+                <h4 class="text-xs font-bold text-gray-900 leading-tight">Centro Escolar University</h4>
+                <p class="text-[11px] text-gray-600 leading-snug">9 Mendiola St, San Miguel, Manila, 1008 Metro Manila, Philippines</p>
+                <div class="flex items-center text-[10px] text-gray-500 mt-1 space-x-1">
+                  <span class="font-semibold text-gray-800">4.3</span>
+                  <span class="text-amber-500">★</span>
+                  <a class="text-blue-600 underline" href="#">(289)</a>
+                </div>
+                <div class="mt-2 flex space-x-2">
+                  <a class="inline-flex items-center px-2 py-1 text-[11px] bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px] mr-1.5"></i> Open in Maps </a>
+                </div>
+              </div>
+              <!-- Simulated Map Canvas Container -->
+              <div class="relative h-64 sm:h-72 w-full bg-slate-100 overflow-hidden">
+                <img alt="Map showing Centro Escolar University Manila" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArBQC1tOyEvETALr9w9pjPSnmXHI5_3KbRBOIPfyurVKfBxm31jtF_b97uk6ETWcvXi85eSqSScqpchC0hDDME8J3MU-HtZ3RUz21wpbMLpBxDSnAun3xRWEWWT2AEikyGW-bD3gO4QGEVfXTNNpqTL3QOyE6v3Gq9Zu4PrxzALv7sk4oaIP-0jA1uUj2rwURim5IJscqNsSpYQtpGxjV26hoY7J_RuGzYQX6h3fM" />
+                <!-- Map Pin Icon Marker -->
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div class="text-red-600 text-3xl drop-shadow-md animate-bounce">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Map Footer Details -->
+              <div class="bg-gray-50 px-3 py-1 text-[9px] text-gray-500 flex justify-between border-t border-gray-200">
+                <span>Keyboard shortcuts</span>
+                <span>Map data ©2026 Google</span>
+              </div>
+            </div>
+          </div>
+          <!-- Right: Message Us Form -->
+          <div>
+            <h3 class="text-xl font-heading text-center md:text-left text-gray-900 mb-6">Message Us</h3>
+            <form class="space-y-4" onsubmit="event.preventDefault();">
+              <!-- Full Name -->
+              <div>
+                <label class="block text-xs text-gray-600 mb-1" for="fullName">Full Name</label>
+                <input class="w-full rounded border-gray-300 focus:border-portfolio-slate focus:ring-portfolio-slate text-sm px-3 py-2 shadow-sm" id="fullName" name="fullName" required="" type="text" />
+              </div>
+              <!-- Email Address -->
+              <div>
+                <label class="block text-xs text-gray-600 mb-1" for="emailAddress">Email Address</label>
+                <input class="w-full rounded border-gray-300 focus:border-portfolio-slate focus:ring-portfolio-slate text-sm px-3 py-2 shadow-sm" id="emailAddress" name="emailAddress" required="" type="email" />
+              </div>
+              <!-- Message Textarea -->
+              <div>
+                <label class="block text-xs text-gray-600 mb-1" for="message">Message</label>
+                <textarea class="w-full rounded border-gray-300 focus:border-portfolio-slate focus:ring-portfolio-slate text-sm px-3 py-2 shadow-sm" id="message" name="message" required="" rows="4"></textarea>
+              </div>
+              <!-- Submit Button -->
+              <div>
+                <button class="w-full border border-gray-400 bg-white hover:bg-gray-50 text-gray-700 py-2 px-4 rounded text-sm font-medium transition-colors shadow-sm active:bg-gray-100" type="submit"> Send </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Contact Section -->
+    <!-- BEGIN: Footer -->
+    <footer class="bg-portfolio-dark text-gray-300 py-6 px-4 text-center text-xs space-y-1">
+      <p class="font-normal text-gray-200">Charles Babbage</p>
+      <p class="font-light text-gray-400">Full Stack Web Developer</p>
+      <p class="font-light text-gray-500 pt-1">© All Rights Reserved 2021</p>
+    </footer>
+    <!-- END: Footer -->
+    <!-- BEGIN: Interactive Scripts -->
+    <script data-purpose="mobile-menu-toggle">
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+        // Close menu upon item click
+        const navLinks = mobileMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+          });
+        });
+      }
+    </script>
+    <!-- END: Interactive Scripts -->
+  </body>
+</html>
